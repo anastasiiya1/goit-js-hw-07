@@ -1,15 +1,12 @@
-function makeTransaction(quantity, pricePerDroid, customerCredits){
-    const totalPrice = pricePerDroid * quantity;
-    if (totalPrice > customerCredits){
-        return `Insufficient funds!`;
-    } else {
-        return `You ordered ${quantity} droids worth ${totalPrice} credits!`
-    }
+const categoriesList = document.querySelector('#categories');
 
-}
+const categoryItems = categoriesList.querySelectorAll('li.item');
+console.log('Кількість категорій:', categoryItems.length);
 
-console.log(makeTransaction(5, 3000, 23000)); // "You ordered 5 droids worth 15000 credits!"
-console.log(makeTransaction(3, 1000, 15000)); // "You ordered 3 droids worth 3000 credits!"
-console.log(makeTransaction(10, 5000, 8000)); // "Insufficient funds!"
-console.log(makeTransaction(8, 2000, 10000)); // "Insufficient funds!"
-console.log(makeTransaction(10, 500, 5000)); // "You ordered 10 droids worth 5000 credits!"
+categoryItems.forEach(category => {
+  const categoryName = category.querySelector('h2').textContent;
+  const categoryItemsList = category.querySelectorAll('ul li');
+
+  console.log(`Категорія: ${categoryName}`);
+  console.log(`Кількість елементів: ${categoryItemsList.length}`);
+});
