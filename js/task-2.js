@@ -19,7 +19,7 @@ const images = [
   {
     url:
       'https://images.pexels.com/photos/37833/rainbow-lorikeet-parrots-australia-rainbow-37833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    alt: 'Blue Geeen and Orange Parrot',
+    alt: 'Blue Green and Orange Parrot',
   },
   {
     url:
@@ -30,9 +30,7 @@ const images = [
 
 
 const galleryList = document.querySelector('.gallery');
-
-// Створюємо фрагмент для збереження створених елементів
-// const fragment = document.createDocumentFragment();
+const fragment = document.createDocumentFragment();
 
 images.forEach(image => {
   const listItem = document.createElement('li');
@@ -47,5 +45,5 @@ images.forEach(image => {
   galleryList.appendChild(listItem);
 });
 
-// Додаємо фрагмент з усіма елементами в список галереї
-// galleryList.appendChild(fragment);
+
+galleryList.appendChild(fragment);

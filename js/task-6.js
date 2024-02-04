@@ -8,6 +8,8 @@ function getRandomHexColor() {
 }
 
 function createBoxes(amount) {
+  destroyBoxes(); // Видаляємо попередні елементи перед додаванням нових
+
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
     const size = 30 + i * 10;
@@ -21,7 +23,9 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  boxesContainer.innerHTML = '';
+  while (boxesContainer.firstChild) {
+    boxesContainer.removeChild(boxesContainer.firstChild);
+  }
 }
 
 createButton.addEventListener('click', () => {
@@ -34,5 +38,3 @@ createButton.addEventListener('click', () => {
     alert('Please enter a number between 1 and 100.');
   }
 });
-
-destroyButton.addEventListener('click', destroyBoxes);
