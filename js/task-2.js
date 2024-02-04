@@ -35,7 +35,6 @@ images.forEach(image => {
   const listItem = document.createElement('li');
 
   const imgElement = document.createElement('img');
-
   imgElement.src = image.url;
   imgElement.alt = image.alt;
 
