@@ -8,7 +8,7 @@ function getRandomHexColor() {
 }
 
 function createBoxes(amount) {
-  destroyBoxes(); // Видаляємо попередні елементи перед додаванням нових
+  destroyBoxes(); 
 
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
@@ -37,4 +37,8 @@ createButton.addEventListener('click', () => {
   } else {
     alert('Please enter a number between 1 and 100.');
   }
+})
+
+destroyButton.addEventListener('click', () => {
+  destroyBoxes();
 });
