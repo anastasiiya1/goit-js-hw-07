@@ -42,3 +42,12 @@ createButton.addEventListener('click', () => {
 destroyButton.addEventListener('click', () => {
   destroyBoxes();
 });
+
+
+
+
+function printFruits([firstFruit, secondFruit, thirdFruit]) {
+  console.log(firstFruit, secondFruit, thirdFruit);
+}
+
+printFruits(["apple", "banana", "orange"]); // "apple banana orange"
