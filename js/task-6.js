@@ -51,3 +51,4 @@ function printFruits([firstFruit, secondFruit, thirdFruit]) {
 }
 
 printFruits(["apple", "banana", "orange"]); // "apple banana orange"
+
